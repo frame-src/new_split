@@ -6,7 +6,7 @@
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 22:52:20 by frmessin          #+#    #+#             */
-/*   Updated: 2022/07/24 18:51:25 by frmessin         ###   ########.fr       */
+/*   Updated: 2022/07/27 00:39:50 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,19 @@ char	**ft_new_split(char *string, char split_char, char* special)
 		i++;
 	}	
 	split_string[tab] = NULL;
-	return NULL;
+	return (split_string);
 }
 
 int main ()
 {
 	char		**j;//       [c][1][2][3][;]
-	j = ft_new_split("adavo a centa ll\"ora per\" vedere la partita", ' ', "\"");
+	char		**z;
+	char		**w;
+	char *string= "echo && ; \"djhfihfihw  ;   kjl\"";
+	j = ft_new_split(string, ';', "\"'");
+	z = ft_new_split(j[0], ' ', "\"'");
+	w = ft_new_split(j[1], ' ', "\"'");
+	//j = ft_new_split("adavo a centa ll\"ora per\" vedere la partita", ' ', "\"");
+	// printf("word count should be 7");
 	return 0;
 }

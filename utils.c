@@ -6,7 +6,7 @@
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 15:40:01 by frmessin          #+#    #+#             */
-/*   Updated: 2022/07/24 17:59:50 by frmessin         ###   ########.fr       */
+/*   Updated: 2022/07/26 23:55:14 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,16 @@ int		in_special( char c, char *special)
 	return (-1);
 }
 
-int		ignore_inside_special(char *string, char special)
+int		ignore_inside_special(char *string, char c_special)
 {
 	char	**split;
 	int i;
 
 	i = 0;
-	if(string[i] == special)
+	if(string[i] == c_special)
 	{
 		i++;
-		while(string[i] != special)
+		while(string[i] != c_special)
 		{
 			i++;
 			if(string[i] == '\0')
